@@ -1,0 +1,41 @@
+
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+body {
+    @apply bg-gray-100 text-gray-700;
+    font-family: "Rubik";
+  }
+  h1 {
+    @apply text-2xl font-bold text-red-500;
+  }
+  h2 {
+    @apply text-xl font-bold my-4;
+  }
+  h3 {
+    @apply text-lg font-bold my-4;
+  }
+  ul {
+    @apply my-10;
+  }
+  p {
+    @apply my-2;
+  }
+  
+  /* header */
+  header {
+    @apply bg-white;
+  
+    nav {
+      @apply flex items-center gap-5 max-w-screen-lg px-12 py-4 mx-auto;
+    }
+    h1 {
+      @apply mr-auto;
+    }
+  }
+  
+ 
