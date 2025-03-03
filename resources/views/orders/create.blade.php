@@ -1,5 +1,5 @@
 <x-layout>
-<h1>Create new order</h1>
+<h2>Create new order</h2>
 <form>
 
 </form>

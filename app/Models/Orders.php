@@ -10,4 +10,9 @@ class Orders extends Model
     protected $fillable = ['title','notes','viewed'];
     /** @use HasFactory<\Database\Factories\OrdersFactory> */
     use HasFactory;
+
+    public function status() {
+        return $this->belongsTo(Status::class);
+
+    }
 }

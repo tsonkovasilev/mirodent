@@ -8,12 +8,12 @@ use App\Models\Orders;
 class OrdersController extends Controller
 {
     public function index() {
-        $orders = Orders::orderBy("created_at","desc")->get();
+        $orders = Orders::with("status")->orderBy("created_at","desc")->paginate(10);
         return view('orders.index',["orders"=>$orders]);
     } 
     
     public function view($id) {
-        $order = Orders::findOrFail($id);
+        $order = Orders::with('status')->findOrFail($id);
         return view('orders.view',["order"=>$order]);
     }
     

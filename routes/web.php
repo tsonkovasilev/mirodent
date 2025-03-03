@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/orders', [OrdersController::class, 'index']);
-Route::get('/orders/create',[OrdersController::class, 'create']);
-Route::get('/orders/{id}',[OrdersController::class, 'view']);
+Route::get('/orders', [OrdersController::class, 'index'])->name("orders.index");
+Route::get('/orders/create',[OrdersController::class, 'create'])->name("orders.create");
+Route::get('/orders/{id}',[OrdersController::class, 'view'])->name("orders.view");
 
